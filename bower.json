@@ -1,0 +1,17 @@
+{
+  "name": "examen",
+  "homepage": "https://github.com/estebansandoval22/examen",
+  "authors": [
+    "¨estebansandoval22¨ <¨esandovals@ucenfotec.ac.cr¨>"
+  ],
+  "description": "primer parcial",
+  "main": "index.html",
+  "license": "MIT",
+  "dependencies": {
+    "angular": "angularjs#^1.5.7",
+    "angular-route": "^1.5.7",
+    "angular-resource": "^1.5.7",
+    "angularfire": "^2.0.1",
+    "firebase": "^3.1.0"
+  }
+}
