@@ -1,21 +1,21 @@
-angular.module('videogames.factories', [])
+angular.module('produc.factories', ['firebase'])
 
 // Old way of firebase reference
 //.value('ref', 'https://project-5047501402504107690.firebaseio.com')
 
-.factory('$games', function($firebaseArray, $firebaseObject){
-	var games = {};
-	var ref = firebase.database().ref().child('games');
+.factory('$product', function($firebaseArray, $firebaseObject){
+	var product = {};
+	var ref = firebase.database().ref().child('product');
 	var list = $firebaseArray(ref);
 	var cache = [];
 
-	games.list = function(){
-		return list.$loaded().then(function(games){
-			return cache = games;
+	product.list = function(){
+		return list.$loaded().then(function(product){
+			return cache = product;
 		});
 	};
 
-	games.add = function(game){
+	/*games.add = function(game){
 		return list.$add(game);
 	};
 
@@ -26,6 +26,6 @@ angular.module('videogames.factories', [])
 	games.edit = function(game){
 		return list.$save(game);
 	};
-
-	return games;
+*/
+	return product;
 })

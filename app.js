@@ -1,25 +1,25 @@
-angular.module('videogames', ['videogames.controllers', 'videogames.factories', 'ngRoute', 'firebase'])
+angular.module('exaApp', ['produc.controllers', 'produc.factories', 'ngRoute', 'firebase'])
 
 .config(function($routeProvider){
 	$routeProvider
-	.when('/', {
-		templateUrl: ""
-	})
-	.when('/games', {
-		templateUrl: "views/games.html",
-		controller: 'listController as list'
-	})
-	.when('/game/:id', {
-		templateUrl: "",
-		controller: ''
-	})
-	.when('/new', {
-		templateUrl: "",
-		controller: ''
-	})
-	.otherwise({
-		redirectTo: '/'
-	});
+		.when('/', {
+			templateUrl: "views/home.html"
+		})
+		.when('/list', {
+			templateUrl: "views/list.html",
+			controller: 'listController as list'
+		})
+		/*.when('/game/:id', {
+			templateUrl: "",
+			controller: ''
+		})
+		.when('/new', {
+			templateUrl: "",
+			controller: ''
+		})*/
+		.otherwise({
+			redirectTo: '/'
+		});
 
   // Initialize Firebase
   var config = {

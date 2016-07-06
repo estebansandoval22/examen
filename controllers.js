@@ -1,17 +1,17 @@
-angular.module('videogames.controllers', [])
+angular.module('produc.controllers', ['firebase'])
 
-.controller('listController', function($location, $games){
+.controller('listController', function($location, $product){
 	var list = this;
 
-	$games.list().then(function(games){
-		list.games = games;
+	$product.list().then(function(product){
+		list.product = product;
 	}, function(error){
 		console.log(error);
 		alert(error.message);
 	});
 })
 
-.controller('addController', function($games){
+/*.controller('addController', function($games){
 	var add = this;
 
 	add.save = function(){
@@ -39,3 +39,4 @@ angular.module('videogames.controllers', [])
 		});
 	};
 });
+*/

@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<html>
+<html ng-app="exaApp">
 <head>
   <title>Examen 1</title>
+  <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css" charset="utf-8">
+  <link rel="stylesheet" href="css/style.css" >
   <script src="bower_components/angular/angular.js"></script>
   <script src="bower_components/angular-route/angular-route.js"></script>
   <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -12,7 +14,34 @@
   <script src="factories.js"></script>
 </head>
   <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="nav-header">
+          <a href="#" class="navbar-brand hidden-xs">Examen Logo</a>
+        </div>
+      </div>
+    </nav>
+  <div ng-view></div>
 
-    <script src='app.js'></script>
+    <!--<section class="container-fluid col-md-12 form-add" ng-controller="addCtrl">
+      <form ng-submit="game.save()" class="container-fluid col-md-8">
+        <h6>id</h6>
+        <input type="text" name="" ng-model="game.game.id">
+        <h6>Nombre</h6>
+      	<input type="text" name="" ng-model="game.game.name">
+        <h6>Cantidad</h6>
+        <input type="text" name="" ng-model="game.game.quantity">
+        <h6>descripcion</h6>
+        <input type="text" name="" ng-model="game.game.descrption">
+        <h6>Precio</h6>
+      	<input type="text" name="" ng-model="game.game.price">
+
+        <input type="submit" name="" value="Save">
+      </form>
+    </section>-->
+      <div>
+    		<a ng-href="#/">list</a>
+    		<br>
+  	</div>
   </body>
 </html>
